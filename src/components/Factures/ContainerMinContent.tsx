@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ChildrenReactNode } from "../types/childrenReactNode";
+import { ChildrenReactNode } from "../../types/childrenReactNode";
 const Wrapper = styled.div`
     width: min-content;
     height: min-content;

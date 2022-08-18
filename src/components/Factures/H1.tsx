@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TextTypes } from "../types/TextTypes";
+import { TextTypes } from "../../types/TextTypes";
 const Wrapper = styled.h1`
     width: min-content;
     height: min-content;
