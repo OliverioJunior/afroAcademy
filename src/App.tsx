@@ -1,23 +1,32 @@
-import { Header, Menu } from "./components";
-import styled from "styled-components";
-
-const Container = styled.div`
-    height: 100vh;
-    width: 100vw;
-    background-color: #381C59;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-`
+import { Header, Menu, ContainerBody, ContainerMinContent, H1, List } from "./components";
 
 function App() {
-
-
+  const headerName = `oliveriojunior`
+  const headerList = [{
+    id: 1,
+    text: "Home"
+  },
+  {
+    id: 2,
+    text: "Techs"
+  },
+  {
+    id: 3,
+    text: "Contato"
+  }
+]
   return (
-    <Container>
-      <Header/>
+    <ContainerBody>
+      <Header>
+          <ContainerMinContent>
+            <H1 h1={headerName}/>
+          </ContainerMinContent>
+          <ContainerMinContent>
+            {headerList.map((item) => <List key={item.id} text={item.text}/>)}
+          </ContainerMinContent>
+      </Header>
       <Menu/>
-    </Container>
+    </ContainerBody>
   )
 }
 
