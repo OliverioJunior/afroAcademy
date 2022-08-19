@@ -1,5 +1,5 @@
 import ContainerMinContent from "../Factures/ContainerMinContent";
-import H1 from "../Factures/H1";
+import Paragraph from "../Factures/Paragraph";
 import Header from "../Factures/Header";
 import List from "../Factures/Lists";
 
@@ -21,7 +21,7 @@ export default function HeaderMount() {
     return(
         <Header>
           <ContainerMinContent>
-            <H1 h1={headerName}/>
+            <Paragraph size={24} p={headerName} weight={600}/>
           </ContainerMinContent>
           <ContainerMinContent>
             {headerList.map((item) => <List key={item.id} text={item.text}/>)}

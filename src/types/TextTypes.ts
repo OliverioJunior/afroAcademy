@@ -1,3 +1,5 @@
 export type TextTypes = {
-    h1: string;
+    p: string;
+    size?: 12| number;
+    weight?: 400 | number;
 }

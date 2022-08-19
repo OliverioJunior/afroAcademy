@@ -7,7 +7,7 @@ const ContainerList = styled.div`
     user-select: none;  
     li{
         list-style: none;
-        color: #fff;
+        
         cursor: pointer;
         font-size: 16px;
     }

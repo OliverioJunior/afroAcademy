@@ -7,7 +7,7 @@ const Wrapper = styled.div`
     flex-direction: column;
 `
 
-export default function Container({children}:ChildrenReactNode) {
+export default function ContainerColumnAll({children}:ChildrenReactNode) {
     return(
         <Wrapper>
             {children}
