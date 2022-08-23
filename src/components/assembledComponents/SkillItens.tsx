@@ -1,4 +1,4 @@
-import {ContainerIcon, ContainerRowAll, Paragraph, SectionHeader, Square} from ".."
+import {ContainerIcon, ContainerRowHeader, Paragraph, SectionHeader, Square} from ".."
 import { HTML5, CSS3, JAVASCRIPT, REACT } from "../../assets/svg/svg";
 
 export default function SkillItens(){
@@ -29,29 +29,18 @@ export default function SkillItens(){
       }
     ]
     return(
-        <ContainerRowAll
-            height={"auto"}
-            width={"100%"}
+        <ContainerRowHeader
           >
             {itens.map((item)=>{
               return(
-                <ContainerRowAll
+                <ContainerRowHeader
                   key={item.id}
-                  height={"300px"}
-                  width={"300px"}
-                  margin="20px"
                 >
-                  <Square
-                    color="var(--primary-color)"
-                    height="300px"
-                    width="300px"
-                    borderRadius="16px"
-                    padding="10px"
-                    >
+                  <Square>
                       <ContainerIcon
-                        color= {item.color}
-                        height={"72px"}
-                        width={"72px"}
+                       
+                      
+                       
                       >
                         {item.icon}
                       </ContainerIcon>
@@ -62,12 +51,12 @@ export default function SkillItens(){
                         text={item.description}
                       />
                     </Square>
-                </ContainerRowAll>
+                </ContainerRowHeader>
                
               )})}
             
                    
 
-            </ContainerRowAll>
+            </ContainerRowHeader>
     )
 }

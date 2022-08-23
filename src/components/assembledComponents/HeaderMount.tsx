@@ -1,11 +1,8 @@
-import ContainerMinContent from "../Factures/ContainerMinContent";
-import Paragraph from "../Factures/Paragraph";
-import Header from "../Factures/Header";
-import List from "../Factures/Lists";
+import { ContainerMenu, List, Header, Paragraph, ContainerRowHeader } from "../index";
 
 export default function HeaderMount() {
-    const headerName = `oliveriojunior`
-  const headerList = [{
+    const headerName = ` oliveriojunior `
+    const headerList = [{
     id: 1,
     text: "Home"
   },
@@ -18,14 +15,17 @@ export default function HeaderMount() {
     text: "Contato"
   }
 ]
+    const caracteres = ['< ', ' />']
     return(
         <Header>
-          <ContainerMinContent>
-            <Paragraph size={24} p={headerName} weight={600}/>
-          </ContainerMinContent>
-          <ContainerMinContent>
+          <ContainerRowHeader>
+            <span>{caracteres[0]}</span>
+              <Paragraph size={24} text={headerName} weight={600}/>
+            <span>{caracteres[1]}</span>
+          </ContainerRowHeader>
+          <ContainerMenu>
             {headerList.map((item) => <List key={item.id} text={item.text}/>)}
-          </ContainerMinContent>
+          </ContainerMenu>
       </Header>
     )
 }

@@ -1,13 +1,9 @@
 import styled from "styled-components";
 import { TextTypes } from "../../types/TextTypes";
-
-export default function SectionHeader({text,size, weight, children}:TextTypes) {
-    const Wrapper = styled.h1`
+const Wrapper = styled.h1`
     width: max-content;
     height: max-content;
     display: flex;
-    font-size: ${size}px;
-    font-weight:${weight};
     user-select: none;
     span{
         color: var(--tertiary-color);
@@ -17,10 +13,11 @@ export default function SectionHeader({text,size, weight, children}:TextTypes) {
         font-size: 24px;
     }
 `
+export default function SectionHeader({text}:TextTypes) {
+   
     return(
         <Wrapper>
          {text}
-         {children}
         </Wrapper>
     )
 } 

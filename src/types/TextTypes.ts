@@ -1,5 +1,6 @@
 export type TextTypes = {
-    p: string;
+    text: string;
     size?: 12| number;
     weight?: 400 | number;
+    children?: React.ReactNode;
 }

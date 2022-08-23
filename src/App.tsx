@@ -1,11 +1,10 @@
-import { ContainerColumnAllScreen, HeaderMount, SectionMount } from "./components";
+import { ContainerMain , Main } from "./components";
 function App() {
   
   return (
-    <ContainerColumnAllScreen>
-      <HeaderMount/>
-      <SectionMount/>
-    </ContainerColumnAllScreen>
+    <ContainerMain>
+      <Main/>
+    </ContainerMain>
   )
 }
 

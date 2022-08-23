@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ChildrenReactNode } from "../../types/childrenReactNode";
+import { ChildrenReactNode } from "../../../types/childrenReactNode";
 const HeaderWrapper = styled.header`
     width: 100%;
     height: 63px;

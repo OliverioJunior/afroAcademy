@@ -4,3 +4,9 @@
   font-family: 'quicksand', sans-serif;
   box-sizing: border-box;
 }
+
+:root{
+  --color-primary: #FFF;
+  --color-secundary: #000;
+  --color-terciary: #4F3ACF;
+}

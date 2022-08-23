@@ -1,14 +1,10 @@
 import styled from "styled-components";
 import { ChildrenReactNode } from "../../types/childrenReactNode";
-
-export default function ContainerColumnMinHeight({children, height, padding,width}:ChildrenReactNode) {
-    const Wrapper = styled.div`
-    width: ${width};
-    min-height: ${height};
+const Wrapper = styled.div`
     display: block;
-    padding: ${padding};
-    box-sizing: border-box;
 `
+export default function ContainerColumnMinHeight({children}:ChildrenReactNode) {
+  
  return(
         <Wrapper>
             {children}

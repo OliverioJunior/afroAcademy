@@ -1,14 +1,23 @@
-import Header from "./Factures/Header";
-import ContainerColumnAllScreen from "./Factures/ContainerColumnAllScreen";
+import Header from "./Factures/Header/Header";
+import ContainerMain from "./Factures/ContainerMain";
+import ContainerMenu from "./Factures/Header/ContainerMenu";
 import ContainerMinContent from "./Factures/ContainerMinContent";
 import ContainerMaxContent from "./Factures/ContainerMaxContent";
 import Paragraph from "./Factures/Paragraph"
 import List from "./Factures/Lists";
 import HeaderMount from "./assembledComponents/HeaderMount";
-import ContainerRowAll from "./Factures/ContainerRowAll";
+import ContainerRowHeader from "./Factures/Header/ContainerRowHeader";
 import ContainerHalfWidthColumn from "./Factures/ContainerHalfWidthColumn";
 import Button from "./Factures/Button";
 import Imagens from "./Factures/Image";
 import Square from "./Factures/Square";
 import SectionMount from "./assembledComponents/SectionMount";
-export { Header,ContainerColumnAllScreen, ContainerMinContent, Paragraph, List, HeaderMount, ContainerRowAll, ContainerHalfWidthColumn, ContainerMaxContent, Button, Imagens, Square, SectionMount};
+import Line from "./Factures/Line";
+import HeaderSkill from "./assembledComponents/HeaderSkill";
+import SkillItens from "./assembledComponents/SkillItens";
+import ContainerIcon from "./Factures/ContainerIcon";
+import SectionHeader from "./Factures/SectionHeader";
+import ContainerMainScreenWidth from './Factures/SectionMainScreen/ContainerMainScreen'
+import Main from './Screens/Main'
+import ContainerImagen from './Factures/SectionMainScreen/ContainerImagen'
+export { Header,ContainerMain, ContainerMinContent, Paragraph, List, HeaderMount, ContainerRowHeader, ContainerHalfWidthColumn, ContainerMaxContent, Button, Imagens, Square, SectionMount, Line, ContainerMenu , HeaderSkill, SkillItens, ContainerIcon, SectionHeader, ContainerMainScreenWidth, Main, ContainerImagen};

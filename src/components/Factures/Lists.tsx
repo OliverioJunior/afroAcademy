@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { TextTypes } from "../../types/TextTypes";
 const ContainerList = styled.div`
     width: min-content;
     height: min-content;
@@ -12,10 +13,7 @@ const ContainerList = styled.div`
         font-size: 16px;
     }
 `
-type Li = {
-    text: string;
-}
-export default function List({text}:Li) {
+export default function List({text}:TextTypes) {
     return(
         <ContainerList>
             <li>

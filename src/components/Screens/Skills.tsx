@@ -1,14 +1,11 @@
-import { ContainerColumnAllScreen, HeaderSkill, SkillItens,Line } from "..";
+import { ContainerMain, HeaderSkill, SkillItens,Line } from "..";
 
 export default function Skills() {
     return (
-    <ContainerColumnAllScreen
-      height={"auto"}
-      width={"100%"}
-    >
+    <ContainerMain>
       <HeaderSkill/>
       <SkillItens/>
       <Line/>
-    </ContainerColumnAllScreen>
+    </ContainerMain>
   );
 }

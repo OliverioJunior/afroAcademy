@@ -1,13 +1,12 @@
 import styled from "styled-components";
 import { ImageTypes } from "../../types/ImageTypes";
-
-export default function Imagens({alt,height,src,width}:ImageTypes) {
-    const Image = styled.img`
-    width: ${width}px;
-    height: ${height}px;
+const Image = styled.img`
+    width: 334px;
     filter: drop-shadow(8px 8px 10px gray);
     position: absolute;
     `
+export default function Imagens({alt,src}:ImageTypes) {
+    
     return( <Image
          src={src}
          alt={alt}

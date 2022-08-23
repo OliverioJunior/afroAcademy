@@ -1,14 +1,12 @@
-import { ContainerColumnAllScreen, Line, HeaderMount, SectionMount } from "..";
+import { ContainerMain, Line, HeaderMount, SectionMount } from "..";
 
 export default function Main(){
     return(
-        <ContainerColumnAllScreen
-            height={"100vh"}
-            width={"100%"}
+        <ContainerMain
         >
             <HeaderMount/>
             <SectionMount/>
             <Line/>
-        </ContainerColumnAllScreen>
+        </ContainerMain>
     )
 }
