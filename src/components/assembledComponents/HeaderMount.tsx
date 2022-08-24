@@ -1,4 +1,4 @@
-import { ContainerMenu, List, Header, Paragraph, ContainerRowHeader } from "../index";
+import { ContainerMenu, List, Header, Paragraph, ContainerRowHeader, NameHeader } from "../index";
 
 export default function HeaderMount() {
     const headerName = ` oliveriojunior `
@@ -20,7 +20,7 @@ export default function HeaderMount() {
         <Header>
           <ContainerRowHeader>
             <span>{caracteres[0]}</span>
-              <Paragraph size={24} text={headerName} weight={600}/>
+              <NameHeader text={headerName}/>
             <span>{caracteres[1]}</span>
           </ContainerRowHeader>
           <ContainerMenu>

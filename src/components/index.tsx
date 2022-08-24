@@ -20,4 +20,7 @@ import SectionHeader from "./Factures/SectionHeader";
 import ContainerMainScreenWidth from './Factures/SectionMainScreen/ContainerMainScreen'
 import Main from './Screens/Main'
 import ContainerImagen from './Factures/SectionMainScreen/ContainerImagen'
-export { Header,ContainerMain, ContainerMinContent, Paragraph, List, HeaderMount, ContainerRowHeader, ContainerHalfWidthColumn, ContainerMaxContent, Button, Imagens, Square, SectionMount, Line, ContainerMenu , HeaderSkill, SkillItens, ContainerIcon, SectionHeader, ContainerMainScreenWidth, Main, ContainerImagen};
+import NameHeader from './Factures/Header/NameHeader'
+import ContainerSectionItens from './Factures/SectionMainScreen/ContainerSectionItens'
+import ContainerButtonSection from './Factures/SectionMainScreen/ContainerButtonSection'
+export { Header,ContainerMain, ContainerMinContent, Paragraph, List, HeaderMount, ContainerRowHeader, ContainerHalfWidthColumn, ContainerMaxContent, Button, Imagens, Square, SectionMount, Line, ContainerMenu , HeaderSkill, SkillItens, ContainerIcon, SectionHeader, ContainerMainScreenWidth, Main, ContainerImagen, NameHeader, ContainerSectionItens, ContainerButtonSection};

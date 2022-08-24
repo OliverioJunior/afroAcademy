@@ -1,20 +1,20 @@
 import Perfil from "../../assets/imgs/perfil.jpeg";
-import {Button , ContainerHalfWidthColumn, ContainerMaxContent, ContainerMainScreenWidth, Imagens, Paragraph, Square, ContainerImagen} from "../index"
+import {Button , ContainerHalfWidthColumn, ContainerMaxContent, ContainerMainScreenWidth, Imagens, Paragraph, Square, ContainerImagen, ContainerSectionItens, ContainerButtonSection} from "../index"
 export default function SectionMount(){
+    const paragraf = 'Este é meu portifólio onde mostro o melhor do meu trabalho como desenvolvedor web.'
+    const button = 'Conheça meu trabalho'
     return(
         <ContainerMainScreenWidth>
           <ContainerHalfWidthColumn>
-            <ContainerMaxContent>
+            <ContainerSectionItens>
               <h1>Oi, eu sou o <span>Olivério Júnior</span>.</h1>
-            </ContainerMaxContent>
-            <ContainerMaxContent>
-              <Paragraph
-              text={"Este é meu portifólio onde mostro o melhor do meu trabalho como desenvolvedor web."}
-              />
-            </ContainerMaxContent>
-            <ContainerMaxContent>
-                <Button text="Conheça meu trabalho"/>
-            </ContainerMaxContent>
+            </ContainerSectionItens>
+            <ContainerSectionItens>
+              <p>{paragraf}</p>
+            </ContainerSectionItens>
+            <ContainerButtonSection>
+                <Button text={button}/>
+            </ContainerButtonSection>
           </ContainerHalfWidthColumn>
           <ContainerImagen>
             <Square/>

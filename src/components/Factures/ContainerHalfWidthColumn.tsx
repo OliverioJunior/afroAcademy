@@ -7,7 +7,10 @@ const Wrapper = styled.section`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #fFFFFF;
+    background-color: #FFFFFF;
+    @media(max-width: 780px) {
+       width: 100%;
+     }
 `
 
 export default function ContainerHalfWidth({children}:ChildrenReactNode) {
