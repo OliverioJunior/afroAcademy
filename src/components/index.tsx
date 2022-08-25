@@ -13,7 +13,7 @@ import Imagens from "./Factures/Image";
 import Square from "./Factures/Square";
 import SectionMount from "./assembledComponents/SectionMount";
 import Line from "./Factures/Line";
-import HeaderSkill from "./assembledComponents/HeaderSkill";
+import HeaderMyTechs from "./assembledComponents/HeaderMyTechs";
 import SkillItens from "./assembledComponents/SkillItens";
 import ContainerIcon from "./Factures/ContainerIcon";
 import SectionHeader from "./Factures/SectionHeader";
@@ -23,4 +23,10 @@ import ContainerImagen from './Factures/SectionMainScreen/ContainerImagen'
 import NameHeader from './Factures/Header/NameHeader'
 import ContainerSectionItens from './Factures/SectionMainScreen/ContainerSectionItens'
 import ContainerButtonSection from './Factures/SectionMainScreen/ContainerButtonSection'
-export { Header,ContainerMain, ContainerMinContent, Paragraph, List, HeaderMount, ContainerRowHeader, ContainerHalfWidthColumn, ContainerMaxContent, Button, Imagens, Square, SectionMount, Line, ContainerMenu , HeaderSkill, SkillItens, ContainerIcon, SectionHeader, ContainerMainScreenWidth, Main, ContainerImagen, NameHeader, ContainerSectionItens, ContainerButtonSection};
+import Mytechs from './Screens/Mytechs'
+import ContainerMyTechs from './Factures/Mytechs/ContainerMyTechs'
+import ContainerHeaderTechs from './Factures/Mytechs/ContainerHeaderTechs'
+import ContainerSkills from './Factures/SectionSkill/ContainerSkills'
+import ContainerSkillItens from './Factures/SectionSkill/ContainerSkillItens'
+
+export { Header,ContainerMain, ContainerMinContent, Paragraph, List, HeaderMount, ContainerRowHeader, ContainerHalfWidthColumn, ContainerMaxContent, Button, Imagens, Square, SectionMount, Line, ContainerMenu , HeaderMyTechs, SkillItens, ContainerIcon, SectionHeader, ContainerMainScreenWidth, Main, ContainerImagen, NameHeader, ContainerSectionItens, ContainerButtonSection, Mytechs, ContainerMyTechs, ContainerHeaderTechs, ContainerSkills, ContainerSkillItens};

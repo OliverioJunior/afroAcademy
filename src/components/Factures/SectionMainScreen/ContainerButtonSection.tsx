@@ -14,10 +14,11 @@ const Wrapper = styled.div`
     height: max-content;
     display: flex;
     margin: 50px;
+    margin-left: 105px;
     align-items: center;
-    justify-content: center;
-    @media(max-width: 780px) {
-        justify-content: start;
-        margin-left: 105px;
+    justify-content: start;
+    @media(max-width: 858px) {
+        justify-content: center;
+        margin: 30px 0;
     }
 `

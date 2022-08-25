@@ -1,6 +1,6 @@
 import styled from "styled-components";
-const Row = styled.img`
-    width: ${80}vw;
+const Row = styled.div`
+    width: ${90}vw;
     height: ${1}px;
     background-color: #B8B8B8;
     align-self: center;

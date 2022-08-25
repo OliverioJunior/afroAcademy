@@ -19,7 +19,7 @@ const Wrapper = styled.div`
     background: #4F3ACF;
     border-radius: 8px;
     cursor: pointer;
-    @media(max-width: 780px) {
+    @media(max-width: 858px) {
         width: 84%;
      }
     

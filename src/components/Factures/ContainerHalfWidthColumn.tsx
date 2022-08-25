@@ -8,8 +8,9 @@ const Wrapper = styled.section`
     align-items: center;
     flex-direction: column;
     background-color: #FFFFFF;
-    @media(max-width: 780px) {
+    @media(max-width: 858px) {
        width: 100%;
+       padding: 20px;
      }
 `
 

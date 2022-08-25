@@ -1,15 +1,12 @@
 import styled from "styled-components";
 import { ChildrenReactNode } from "../../../types/childrenReactNode";
-const Wrapper = styled.section`
+const Wrapper = styled.div`
     width: 100vw;
-    height: calc(100vh - 76px);
+    min-height: 50vh;
     display: flex;
-    @media(max-width: 858px) {
-        justify-content: center;
-     }
+    flex-direction: column;
 `
-
-export default function ContainerMainScreenWidth({children}:ChildrenReactNode) {
+export default function ContainerMyTechs({children}:ChildrenReactNode) {
     return(
         <Wrapper>
             {children}

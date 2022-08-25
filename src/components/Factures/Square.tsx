@@ -4,7 +4,7 @@ import { SquareTypes } from "../../types/SquareTypes";
     width: ${344}px;
     height: ${338}px;
     background-color: #000;
-    filter: drop-shadow(8px 8px 10px gray);
+    filter: drop-shadow(0px 5px 4px rgba(0,0,0,0.9));
     transform: rotate(6deg);
 `
 export default function Square({children}:SquareTypes) {

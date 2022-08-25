@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { ChildrenReactNode } from "../../../types/childrenReactNode";
 
-export default function ContainerSectionItens({children}:ChildrenReactNode) {
+export default function ContainerHeaderTechs({children}:ChildrenReactNode) {
     return(
         <Wrapper>
             {children}
@@ -13,32 +13,23 @@ const Wrapper = styled.div`
     width: 100%;
     height: max-content;
     display: flex;
-    margin: 50px;
+    margin: 80px 25px;
     align-items: center;
     justify-content: start;
-    margin-left: 105px;
    
     h1{
-        font-size: 3em;
+        font-size: 2.5em;
         font-weight: 700;
         text-align: start;
     }
     span{
         color: var(--color-terciary);
     }
-    p{
-        font-size: 1.25em;
-        text-align: start;
-        word-wrap: break-word
-    }
     @media(max-width: 858px) {
-        margin: 30px 0;
+        justify-content: start;
         h1{
-            font-size: 2.625em;
-            margin: 0px 30px;
-        }
-        p{
-            font-size: 1.09375em;
+            font-size: 2.1875em;
+            text-align: start;
             margin: 0px 30px;
         }
       }

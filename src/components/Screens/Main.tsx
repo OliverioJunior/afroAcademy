@@ -2,8 +2,7 @@ import { ContainerMain, Line, HeaderMount, SectionMount } from "..";
 
 export default function Main(){
     return(
-        <ContainerMain
-        >
+        <ContainerMain>
             <HeaderMount/>
             <SectionMount/>
             <Line/>

@@ -4,7 +4,7 @@ const ContainerList = styled.div`
     width: min-content;
     height: min-content;
     display: flex;
-    margin: 10px;
+    margin: auto;
     user-select: none;  
     li{
         list-style: none;
