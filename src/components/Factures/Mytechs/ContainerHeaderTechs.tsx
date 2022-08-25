@@ -23,7 +23,7 @@ const Wrapper = styled.div`
         text-align: start;
     }
     span{
-        color: var(--color-terciary);
+        color: var(--color-tertiary);
     }
     @media(max-width: 858px) {
         justify-content: start;

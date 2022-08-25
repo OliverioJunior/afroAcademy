@@ -6,7 +6,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     span{
-        color:var(--color-terciary);
+        color:var(--color-tertiary);
         font-weight: 700;
     }
     @media(max-width: 858px) {

@@ -1,12 +1,13 @@
+import { TextTypes } from "../../types/TextTypes"
 import { ContainerHeaderTechs } from "../index"
 
 
-export default function HeaderMyTechs() {
+export default function HeaderMyTechs({span, text}: TextTypes) {
     return (
         <ContainerHeaderTechs>
           <h1>
-            Minhas
-            <span> techs</span>
+            {text}
+            <span> {span}</span>
             .
           </h1>
         </ContainerHeaderTechs>

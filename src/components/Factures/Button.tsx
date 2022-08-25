@@ -16,7 +16,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #4F3ACF;
+    background: var(--color-tertiary);
     border-radius: 8px;
     cursor: pointer;
     @media(max-width: 858px) {
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
     
 `
 const Text = styled.p`
-    color: #FFFFFF;
+    color: var(--color-primary);
     font-size: 16px;
     font-weight: 500;
 `

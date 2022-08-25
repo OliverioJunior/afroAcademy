@@ -1,10 +1,11 @@
-import { ContainerMain , Main, Mytechs } from "./components";
+import { ContainerMain , Main, Mytechs, Together } from "./components";
 function App() {
   
   return (
     <ContainerMain>
       <Main/>
       <Mytechs/>
+      <Together/>
     </ContainerMain>
   )
 }

@@ -1,4 +1,4 @@
-import {ContainerIcon, ContainerSkillItens, Paragraph, SectionHeader, ContainerSkills} from ".."
+import {ContainerIcon, ContainerSkillItens, ContainerSkills} from ".."
 import { HTML5, CSS3, JAVASCRIPT, REACT } from "../../assets/svg/svg";
 
 export default function SkillItens(){
@@ -33,21 +33,21 @@ export default function SkillItens(){
             {itens.map((item)=>{
               return(
                 <ContainerSkillItens
-                  key={item.id}
-                >
-                
-                      <ContainerIcon>
-                        {item.icon}
-                      </ContainerIcon>
-                      <SectionHeader
-                        text={`${item.text}`}
-                      />
-                      <Paragraph
-                        text={item.description}
-                      />
+                key={item.id}>
+                  <ContainerIcon>
+                    {item.icon}
+                  </ContainerIcon>
+                  <div> 
+                    <h2>
+                      {`${item.text}`}
+                    </h2>
+                  </div> 
+                  <p>
+                    {item.description}
+                  </p>
+                    
                 </ContainerSkillItens>
-               
-              )})}
+             )})}
           </ContainerSkills>
     )
 }

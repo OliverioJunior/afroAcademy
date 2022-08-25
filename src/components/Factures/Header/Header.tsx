@@ -3,7 +3,7 @@ import { ChildrenReactNode } from "../../../types/childrenReactNode";
 const HeaderWrapper = styled.header`
     width: 100%;
     height: 63px;
-    background-color: #FFFFFF;
+    background-color: var(--color-primary);
     display: flex;
     justify-content: space-between;
     align-items: center;

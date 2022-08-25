@@ -24,12 +24,13 @@ const Wrapper = styled.div`
         text-align: start;
     }
     span{
-        color: var(--color-terciary);
+        color: var(--color-tertiary);
     }
     p{
         font-size: 1.25em;
         text-align: start;
-        word-wrap: break-word
+        word-wrap: break-word;
+        color: var(--color-quaternary);
     }
     @media(max-width: 858px) {
         margin: 30px 0;
