@@ -5,11 +5,13 @@ import { ContainerHeaderTechs } from "../index"
 export default function HeaderMyTechs({span, text}: TextTypes) {
     return (
         <ContainerHeaderTechs>
-          <h1>
-            {text}
-            <span> {span}</span>
-            .
-          </h1>
+          <div>
+            <h1>
+              {text}
+              <span> {span}</span>
+              .
+            </h1>
+          </div>
         </ContainerHeaderTechs>
     )
 }

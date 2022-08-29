@@ -20,6 +20,7 @@ const Wrapper = styled.div`
     margin: 20px auto;
     overflow: hidden; 
    
+   
     }
     div{
         margin: 0px 0px 0 40px;
@@ -37,11 +38,16 @@ const Wrapper = styled.div`
     p{
         font-size: 1rem; 
         margin: 20px 10px 0px 22px;
-       
+        color:var(--color-quaternary);
     }
+
     &:hover{
         background: var(--color-tertiary);
         color: var(--color-primary);
-        transition: .5s
+        transition: .5s;
+        p{
+            color: var(--color-primary);
+            transition: .5s;
+        }
     }
 `
