@@ -1,4 +1,4 @@
-import Perfil from "../../assets/imgs/perfil.jpeg";
+import Perfil from "../../assets/imgs/Perfil.jpeg";
 import {Button , ContainerHalfWidthColumn, ContainerMainScreenWidth, Imagens, Square, ContainerImagen, ContainerSectionItens, ContainerButtonSection} from "../index"
 export default function SectionMount(){
     const paragraf = 'Este é meu portifólio onde mostro o melhor do meu trabalho como desenvolvedor web.'
