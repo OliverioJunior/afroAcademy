@@ -32,5 +32,5 @@ import Together from './Screens/Together'
 import ContainerTogether from './Factures/Together/ContainerTogether'
 import ContainerLinks from './Factures/Together/ContainerLinks'
 import WrapperLinks from './Factures/Together/WrapperLinks'
-
-export { Header,ContainerMain, ContainerMinContent, Paragraph, List, HeaderMount, ContainerRowHeader, ContainerHalfWidthColumn, ContainerMaxContent, Button, Imagens, Square, SectionMount, Line, ContainerMenu , HeaderMyTechs, SkillItens, ContainerIcon, SectionHeader, ContainerMainScreenWidth, Main, ContainerImagen, NameHeader, ContainerSectionItens, ContainerButtonSection, Mytechs, ContainerMyTechs, ContainerHeaderTechs, ContainerSkills, ContainerSkillItens, Together, ContainerTogether, ContainerLinks, WrapperLinks};
+import ContainerButtonsLinks from "./assembledComponents/ContainerButtonsLinks";
+export { Header,ContainerMain, ContainerMinContent, Paragraph, List, HeaderMount, ContainerRowHeader, ContainerHalfWidthColumn, ContainerMaxContent, Button, Imagens, Square, SectionMount, Line, ContainerMenu , HeaderMyTechs, SkillItens, ContainerIcon, SectionHeader, ContainerMainScreenWidth, Main, ContainerImagen, NameHeader, ContainerSectionItens, ContainerButtonSection, Mytechs, ContainerMyTechs, ContainerHeaderTechs, ContainerSkills, ContainerSkillItens, Together, ContainerTogether, ContainerLinks, WrapperLinks, ContainerButtonsLinks};
