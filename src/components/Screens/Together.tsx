@@ -12,7 +12,9 @@ export default function Together(){
                 <ContainerTogether/>
             </div>
             <ContainerButtonsLinks/>
-            <Line />
+            <footer>
+            Todos os direitos reservados a Olivério Júnior - 2022
+            </footer>
         </ContainerMyTechs>
     )
 }

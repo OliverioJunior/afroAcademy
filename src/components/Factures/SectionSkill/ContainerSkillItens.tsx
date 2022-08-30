@@ -30,7 +30,7 @@ const Wrapper = styled.div`
         align-items: flex-end;
         justify-content: start;
         h2{
-            font-size: 1.5rem; 
+            font-size: 1.3rem; 
             text-align:left;
         }
         

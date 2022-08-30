@@ -20,32 +20,8 @@ const Container = styled.div`
     background: ${({colors}:Colors) => colors};
     overflow: hidden;
     cursor: pointer;
-    div{
-        width:100%;
-        text-align: center;
-        color: white;
-        display: flex;
-        align-items: center;
-        padding: 0 0 0 20px;
-        section{
-            padding: 0;
-            overflow:hidden;
-            width:500px;
-            display: flex;
-            align-items: center;
-            height: 27px;
-        }
-        i{
-            width: 25px;
-            height: 27px;
-            overflow: hidden;
-            svg{
-                fill: white;
-            }
-        }
-        
-    }
-    
+    margin-right: 20px;
+    border-radius: 2px;
 @media(max-width: 858px) {
     width: 100%;
     margin-top: 30px; 

@@ -5,6 +5,11 @@ const Wrapper = styled.div`
     min-height: 50vh;
     display: flex;
     flex-direction: column;
+    footer{
+        margin: 50px 0 10px 0;
+        color: var(--color-quaternary);
+        text-align: center;
+    }
 `
 export default function ContainerMyTechs({children}:ChildrenReactNode) {
     return(

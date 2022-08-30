@@ -5,25 +5,25 @@ export default function SkillItens(){
     const itens = [{
         id: 1,
         color: '#E44D26',
-        text: "HTML5",
-        description: "Uma linguagem de marcação poderosa para a criação de páginas web presente em todo o desenvolvimento de sites.",
+        text: "React Native",
+        description: "É uma biblioteca Javascript criada pelo Facebook. É usada para desenvolver aplicativos para os sistemas Android e iOS de forma nativa.",
         icon: HTML5,
       },{
         id: 2,
         color: '#264DE4',
-        text: "CSS3",
-        description: "Uma linguagem de estilo que permite a criação de páginas web com um design mais atraente e responsivo.",
+        text: "Styled-Components",
+        description: "Trata-se de uma biblioteca (lib) que nos permite escrever códigos CSS dentro do JavaScript.",
         icon: CSS3
       },{
         id: 3,
         color: '#F7DF1E',
-        text: "JavaScript",
-        description: "Uma linguagem de programação que permite a criação de páginas web com um design mais atraente e responsivo.",
+        text: "Typescript",
+        description: "É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.",
         icon: JAVASCRIPT
       },{
         id: 4,
         color: '#61DAFB',
-        text: "React",
+        text: "ReactJs",
         description: "Uma biblioteca JavaScript para a criação de interfaces de usuário.",
         icon: REACT
       }

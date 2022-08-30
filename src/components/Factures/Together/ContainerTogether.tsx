@@ -17,6 +17,7 @@ const Container = styled.div`
   width: 100%;
   color: var(--color-quaternary);
   margin-bottom: 30px;
+  
   div{
     margin: 30px
   }
