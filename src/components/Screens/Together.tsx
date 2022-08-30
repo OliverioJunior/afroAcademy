@@ -4,19 +4,23 @@ export default function Together(){
     const redes = [{
         id: 1,
         icon: WHATS,
-        title: ' (79) 99682-4092'
+        title: ' (79) 99682-4092',
+        colors: '#25d366'
     },{
         id:2,
         icon: LINKEDIN,
-        title: 'in/olivério-júnior'
+        title: 'in/olivério-júnior',
+        colors: '#0e76a8'
     },{
         id:3,
         icon: GITHUB,
-        title: 'OliverioJunior'
+        title: 'OliverioJunior',
+        colors: '#000'
     },{
         id:4,
         icon:GMAIL,
-        title: 'oliverio.junior2'
+        title: 'oliverio.junior2',
+        colors: '#ea4335'
     }]
     return(
         <ContainerMyTechs>
@@ -31,7 +35,7 @@ export default function Together(){
                
                   {redes.map((item)=>{
                     return(
-                        <WrapperLinks key={item.id}>
+                        <WrapperLinks colors={item.colors} key={item.id}>
                             <div >
                                 <div>
                                     <i>

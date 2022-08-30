@@ -1,13 +1,11 @@
 import styled from "styled-components"
 import { ChildrenReactNode } from "../../../types/childrenReactNode"
 type Colors= {
-    green?: string;
-    blue?: boolean;
-    red?: boolean
+    colors?: string;
 }
-export default function WrapperLinks({children}:ChildrenReactNode) {
+export default function WrapperLinks({children, colors}:ChildrenReactNode) {
     return (
-        <Container green="red">
+        <Container colors={colors}>
             {children}
         </Container>
     )
@@ -19,7 +17,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: ${({green}:Colors) => green};
+    background: ${({colors}:Colors) => colors};
     overflow: hidden;
     cursor: pointer;
     div{
