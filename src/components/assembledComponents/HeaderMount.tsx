@@ -1,21 +1,42 @@
-import { ContainerMenu, List, Header, Paragraph, ContainerRowHeader, NameHeader } from "../index";
+import { ContainerMenu, List, Header, ContainerRowHeader, NameHeader } from "../index";
+import React,{ useRef, useLayoutEffect} from "react";
 
 export default function HeaderMount() {
     const headerName = ` oliveriojunior `
+    const listRef = [useRef<HTMLDivElement>(null!),useRef<HTMLDivElement>(null!),useRef<HTMLDivElement>(null!)]
     const headerList = [{
     id: 1,
-    text: "Home"
+    text: "Home",
+    listRef: listRef[0]   
   },
   {
     id: 2,
-    text: "Techs"
+    text: "Techs",
+    listRef: listRef[1]   
   },
   {
     id: 3,
-    text: "Contato"
+    text: "Contato",
+    listRef: listRef[2]   
   }
+  
 ]
     const caracteres = ['< ', ' />']
+   
+    useLayoutEffect(()=>{
+        const listHome = listRef[0].current
+        const listTechs = listRef[1].current
+        const listContact = listRef[2].current
+        listHome.addEventListener('click', (e)=>{
+            console.log(e.target)
+        })
+        listTechs.addEventListener('click', (e)=>{
+            console.log(e.target)
+        })
+        listContact.addEventListener('click', (e)=>{
+            console.log(e.target)
+        })
+    })
     return(
         <Header>
           <ContainerRowHeader>
@@ -24,7 +45,7 @@ export default function HeaderMount() {
             <span>{caracteres[1]}</span>
           </ContainerRowHeader>
           <ContainerMenu>
-            {headerList.map((item) => <List key={item.id} text={item.text}/>)}
+            {headerList.map((item) => <List innerRef={item.listRef} key={item.id} text={item.text}/>)}
           </ContainerMenu>
       </Header>
     )

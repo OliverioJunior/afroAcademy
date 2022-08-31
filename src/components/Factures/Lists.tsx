@@ -13,12 +13,12 @@ const ContainerList = styled.div`
         font-size: 16px;
     }
 `
-export default function List({text}:TextTypes) {
+export default function List({text, innerRef}:TextTypes) {
     return(
-        <ContainerList>
+        <ContainerList ref={innerRef}>
             <li>
                 {text}
-             </li>
+            </li>
         </ContainerList>
     )
 } 
