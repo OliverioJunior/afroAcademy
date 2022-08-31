@@ -3,13 +3,11 @@ import { AuthProvider } from "./context/auth";
 function App() {
   
   return (
-    <AuthProvider>
-      <ContainerMain>
+     <ContainerMain>
         <Main/>
         <Mytechs/>
         <Together/>
       </ContainerMain>
-    </AuthProvider>
 
   )
 }

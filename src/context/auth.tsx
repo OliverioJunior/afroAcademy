@@ -4,6 +4,9 @@ type PropsUserContext = {
     scrool: number;
     setScrool: React.Dispatch<React.SetStateAction<number>>
 }
+type children = {
+    children: React.ReactNode
+}
 
 const DEFAULT_VALUE = {
     scrool: 0,
@@ -12,7 +15,7 @@ const DEFAULT_VALUE = {
 
 export const AuthContext = createContext<PropsUserContext>(DEFAULT_VALUE);
 
-export const AuthProvider = (children: any) =>{
+export const AuthProvider = ({children}:any) =>{
 
     const [scrool, setScrool] = useState(DEFAULT_VALUE.scrool)
 
