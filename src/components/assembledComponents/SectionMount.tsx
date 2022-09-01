@@ -13,7 +13,7 @@ export default function SectionMount(){
               <p>{paragraf}</p>
             </ContainerSectionItens>
             <ContainerButtonSection>
-                <Button text={button}/>
+                <Button link={'/AfroToDo'} text={button}/>
             </ContainerButtonSection>
           </ContainerHalfWidthColumn>
           <ContainerImagen>

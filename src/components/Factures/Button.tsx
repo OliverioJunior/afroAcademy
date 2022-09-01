@@ -1,12 +1,16 @@
 import styled from "styled-components";
 import { ButtonTypes } from "../../types/ButtonTypes";
+import { Link } from 'react-router-dom'
 
-export default function Button({text , onClick}:ButtonTypes) {
+export default function Button({text , onClick, link}:ButtonTypes) {
     return(
         <Wrapper onClick={onClick}>
-            <Text>
-               {text}
-            </Text>
+            <Link to={link}>
+                <Text>
+                    {text}
+                </Text>
+            </Link>
+            
         </Wrapper>
     )
 } 
@@ -19,6 +23,9 @@ const Wrapper = styled.div`
     background: var(--color-tertiary);
     border-radius: 8px;
     cursor: pointer;
+    a{
+        text-decoration: none;
+    }
     @media(max-width: 858px) {
         width: 84%;
      }
