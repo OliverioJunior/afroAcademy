@@ -1,13 +1,14 @@
-import { ContainerMain , Main, Mytechs, Together } from "./components";
-import { AuthProvider } from "./context/auth";
+import { Welcome } from "./components";
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 function App() {
   
   return (
-     <ContainerMain>
-        <Main/>
-        <Mytechs/>
-        <Together/>
-      </ContainerMain>
+    <Router>
+      <Routes>
+        <Route path= "/" element= {<Welcome/>} />
+      </Routes>
+    </Router>
+
 
   )
 }
