@@ -17,14 +17,16 @@ export default function Button({text , onClick, link}:ButtonTypes) {
 const Wrapper = styled.div`
     width: 268px;
     height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: var(--color-tertiary);
     border-radius: 8px;
     cursor: pointer;
     a{
         text-decoration: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     @media(max-width: 858px) {
         width: 84%;

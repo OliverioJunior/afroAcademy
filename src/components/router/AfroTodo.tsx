@@ -5,8 +5,8 @@ function AfroTodo() {
   
   return (
      <ContainerMain>
-        <Header>
-        <h1>AfroToDo</h1>
+        <Header value="center" colors="green">
+            <h1>AfroToDo</h1>
         </Header>
       </ContainerMain>
 
