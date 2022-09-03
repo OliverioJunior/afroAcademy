@@ -6,7 +6,7 @@ const Wrapper = styled.div`
     display: flex;
 `
 
-export default function ContainerMinContent({children}:ChildrenReactNode) {
+export default function ContainerMinContent({children}:ChildrenReactNode<undefined>) {
     return(
         <Wrapper>
             {children}

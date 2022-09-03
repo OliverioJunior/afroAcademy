@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { ChildrenReactNode } from "../../../types/childrenReactNode";
 
-export default function ContainerButtonSection({children}:ChildrenReactNode) {
+export default function ContainerButtonSection({children}:ChildrenReactNode<undefined>) {
     return(
         <Wrapper>
             {children}

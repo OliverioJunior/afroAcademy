@@ -11,7 +11,7 @@ const Wrapper = styled.div`
         display:none;
     }
 `
-export default function ContainerMenu({ children }:ChildrenReactNode) {
+export default function ContainerMenu({ children }:ChildrenReactNode<undefined>) {
    
  return(
         <Wrapper>

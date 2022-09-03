@@ -3,7 +3,7 @@ import { ChildrenReactNode } from "../../../types/childrenReactNode"
 type Colors= {
     colors?: string;
 }
-export default function WrapperLinks({children, colors}:ChildrenReactNode) {
+export default function WrapperLinks({children, colors}:ChildrenReactNode<undefined>) {
     return (
         <Container colors={colors}>
             {children}

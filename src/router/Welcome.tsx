@@ -1,4 +1,4 @@
-import { ContainerMain, Main, Mytechs, Together } from ".."
+import { ContainerMain, Main, Mytechs, Together } from "../components"
 
 
 function Welcome() {

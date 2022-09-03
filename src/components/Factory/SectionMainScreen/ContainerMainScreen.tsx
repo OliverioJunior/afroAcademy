@@ -2,16 +2,17 @@ import styled from "styled-components";
 import { ChildrenReactNode } from "../../../types/childrenReactNode";
 const Wrapper = styled.section`
     width: 100vw;
-    height: calc(100vh - 76px);
+    height: calc(100vh);
     display: flex;
+    background: ${({color}) => color};
     @media(max-width: 858px) {
         justify-content: center;
      }
 `
 
-export default function ContainerMainScreenWidth({children}:ChildrenReactNode) {
+export default function ContainerMainScreenWidth({children, colors}:ChildrenReactNode<undefined>) {
     return(
-        <Wrapper>
+        <Wrapper color={colors}>
             {children}
         </Wrapper>
     )

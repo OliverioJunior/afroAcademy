@@ -14,7 +14,7 @@ const Wrapper = styled.section`
      }
 `
 
-export default function ContainerHalfWidth({children}:ChildrenReactNode) {
+export default function ContainerHalfWidth({children}:ChildrenReactNode<undefined>) {
     return(
         <Wrapper>
             {children}
