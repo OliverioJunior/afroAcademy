@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { ChildrenReactNode } from "../../../types/childrenReactNode";
 
-export default function ContainerSkillItens({children}:ChildrenReactNode) {
+export default function ContainerSkillItens({children}:ChildrenReactNode<undefined>) {
     return(
         <Wrapper>
             {children}

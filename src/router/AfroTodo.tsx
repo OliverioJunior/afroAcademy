@@ -1,4 +1,5 @@
-import { ContainerMain, Header, ContainerMainScreenWidth } from "../components"
+import { ContainerMain, Header, ContainerMainScreenWidth, ContainerForm } from "../components"
+import { ADICIONAR } from "../assets/svg/svg";
 import Vector from '../assets/svg/Vector.svg'
 
 function AfroTodo() {
@@ -9,14 +10,15 @@ function AfroTodo() {
           <img src={Vector} alt='icon check'/><h1>AfroToDo</h1>
         </Header>
         <ContainerMainScreenWidth colors="#EFF1F3">
-          <div>
-            <label>
-              <input></input>
-              <button></button>
-            </label>
-          </div>
+          <ContainerForm>
+            <div>
+              <input type='text' placeholder='Insira uma nova atividade' />
+              <button>{ADICIONAR}</button>
+            </div>
+          </ContainerForm>
         </ContainerMainScreenWidth>
       </ContainerMain>
+
 
 
   )
