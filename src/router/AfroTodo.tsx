@@ -13,7 +13,7 @@ function AfroTodo() {
           <ContainerForm>
             <div>
               <input type='text' placeholder='Insira uma nova atividade' />
-              <button>{ADICIONAR}</button>
+              <button onClick={(e)=> console.log(e.target)}>{ADICIONAR}</button>
             </div>
           </ContainerForm>
         </ContainerMainScreenWidth>
