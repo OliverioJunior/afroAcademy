@@ -14,7 +14,7 @@ const Wrapper = styled.div`
     }
 `
 
-export default function ContainerRowAll({children}:ChildrenReactNode) {
+export default function ContainerRowAll({children}:ChildrenReactNode<undefined>) {
     return(
         <Wrapper>
             {children}

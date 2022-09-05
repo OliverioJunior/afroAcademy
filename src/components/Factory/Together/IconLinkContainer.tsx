@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { ChildrenReactNode } from "../../../types/childrenReactNode"
-export default function IconLinkContainer({children}:ChildrenReactNode) {
+export default function IconLinkContainer({children}:ChildrenReactNode<undefined>) {
     return (
         <Container>
             {children}

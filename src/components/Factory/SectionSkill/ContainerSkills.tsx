@@ -8,7 +8,7 @@ const Wrapper = styled.div`
     align-items: center;
 `
 
-export default function ContainerSkills({children}:ChildrenReactNode) {
+export default function ContainerSkills({children}:ChildrenReactNode<undefined>) {
     return(
         <Wrapper>
             {children}

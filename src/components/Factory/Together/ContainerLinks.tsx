@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { ChildrenReactNode } from "../../../types/childrenReactNode"
 
-export default function ContainerLinks({children}:ChildrenReactNode) {
+export default function ContainerLinks({children}:ChildrenReactNode<undefined>) {
     return (
         <Container>
             {children}

@@ -11,7 +11,7 @@ const Wrapper = styled.div`
         text-align: center;
     }
 `
-export default function ContainerMyTechs({children}:ChildrenReactNode) {
+export default function ContainerMyTechs({children}:ChildrenReactNode<undefined>) {
     return(
         <Wrapper>
             {children}

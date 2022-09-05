@@ -15,7 +15,7 @@ const Wrapper = styled.section`
 
 `
 
-export default function ContainerImagen({children}:ChildrenReactNode) {
+export default function ContainerImagen({children}:ChildrenReactNode<undefined>) {
     return(
         <Wrapper>
             {children}

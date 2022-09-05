@@ -13,7 +13,7 @@ const Wrapper = styled.div`
         transform: translate(100px, 200px);
     }
 `
-export default function ContainerIcon({children }:ChildrenReactNode) {
+export default function ContainerIcon({children }:ChildrenReactNode<undefined>) {
    
  return(
         <Wrapper>
