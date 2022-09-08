@@ -37,4 +37,6 @@ import IconLinkContainer from "./Factory/Together/IconLinkContainer";
 import Welcome from "../router/Welcome";
 import AfroTodo from "../router/AfroTodo";
 import ContainerForm from "./Factory/AfroToDo/ContainerForm";
-export { Header,ContainerMain, ContainerMinContent, Paragraph, List, HeaderMount, ContainerRowHeader, ContainerHalfWidthColumn, ContainerMaxContent, Button, Imagens, Square, SectionMount, Line, ContainerMenu , HeaderMyTechs, SkillItens, ContainerIcon, SectionHeader, ContainerMainScreenWidth, Main, ContainerImagen, NameHeader, ContainerSectionItens, ContainerButtonSection, Mytechs, ContainerMyTechs, ContainerHeaderTechs, ContainerSkills, ContainerSkillItens, Together, ContainerTogether, ContainerLinks, WrapperLinks, ContainerButtonsLinks, IconLinkContainer, Welcome, AfroTodo, ContainerForm};
+import ContainerNoTask from "./Factory/AfroToDo/ContainerNoTask";
+import NoTask from "./assembledComponents/AfroToDo/NoTask";
+export { Header,ContainerMain, ContainerMinContent, Paragraph, List, HeaderMount, ContainerRowHeader, ContainerHalfWidthColumn, ContainerMaxContent, Button, Imagens, Square, SectionMount, Line, ContainerMenu , HeaderMyTechs, SkillItens, ContainerIcon, SectionHeader, ContainerMainScreenWidth, Main, ContainerImagen, NameHeader, ContainerSectionItens, ContainerButtonSection, Mytechs, ContainerMyTechs, ContainerHeaderTechs, ContainerSkills, ContainerSkillItens, Together, ContainerTogether, ContainerLinks, WrapperLinks, ContainerButtonsLinks, IconLinkContainer, Welcome, AfroTodo, ContainerForm, ContainerNoTask, NoTask};
