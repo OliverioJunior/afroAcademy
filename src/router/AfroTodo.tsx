@@ -1,4 +1,4 @@
-import { ContainerMain, Header, ContainerMainScreenWidth, ContainerForm, NoTask } from "../components"
+import { ContainerMain, Header, ContainerForm, NoTask, ContainerAfroNoTask } from "../components"
 import { ADICIONAR } from "../assets/svg/svg";
 import { useRef } from 'react'
 import Vector from '../assets/svg/Vector.svg'
@@ -9,7 +9,7 @@ function AfroTodo() {
         <Header value="center" colors="var(--color-quinary)">
           <img src={Vector} alt='icon check'/><h1>AfroToDo</h1>
         </Header>
-        <ContainerMainScreenWidth colors="#EFF1F3">
+        <ContainerAfroNoTask>
           <ContainerForm>
             <div>
               <input ref={inputRef} type='text' placeholder='Insira uma nova atividade' />
@@ -17,7 +17,7 @@ function AfroTodo() {
             </div>
           </ContainerForm>
           <NoTask/>
-        </ContainerMainScreenWidth>
+        </ContainerAfroNoTask>
       </ContainerMain>
 
 

@@ -10,6 +10,11 @@ const Wrapper = styled.div`
         color: var(--color-quaternary);
         text-align: center;
     }
+    a{
+        text-decoration: none;
+        color: var(--color-secunday);
+        pointer-events: none;
+    }
 `
 export default function ContainerMyTechs({children}:ChildrenReactNode<undefined>) {
     return(

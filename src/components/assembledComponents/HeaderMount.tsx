@@ -27,8 +27,11 @@ export default function HeaderMount() {
         const listHome = listRef[0].current
         const listTechs = listRef[1].current
         const listContact = listRef[2].current
-        listHome.addEventListener('click', (e)=>{
-            console.log(e.target)
+        listHome.addEventListener('click', ()=>{
+           window.scrollTo({
+            top:0,
+            behavior: "smooth"
+           })
         })
         listTechs.addEventListener('click', (e)=>{
             console.log(e.target)
