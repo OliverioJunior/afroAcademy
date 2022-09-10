@@ -16,6 +16,11 @@ const HeaderWrapper = styled.header`
     letter-spacing: 2px;
     padding: 0 40px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    h1{
+      margin: 0 10px;
+      color: #fff;
+      cursor: pointer;
+    }
 `
 
 export default function Header({children, value, colors}:ChildrenReactNode<string>) {

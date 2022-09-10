@@ -21,6 +21,11 @@ const Wrapper = styled.main`
     }
     p{
         font-size: 1rem;
-
+     }
+    @media (max-width: 1080px) {
+        p{
+           text-align: center;
+         }
     }
+
 `

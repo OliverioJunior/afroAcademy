@@ -27,6 +27,7 @@ const Wrapper = styled.form`
         padding: 16px;
         border: 1px solid #C8E6D2;
         border-radius: 8px;
+        cursor: pointer;
         &:focus {
             outline: none;
         }
@@ -46,5 +47,6 @@ const Wrapper = styled.form`
             fill: var(--color-primary)
         }
     }
+    
       
 `
