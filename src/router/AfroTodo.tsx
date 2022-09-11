@@ -1,10 +1,10 @@
-import { ContainerMain, Header, ContainerForm, NoTask, ContainerAfroNoTask, ContainerTask, ListTask} from "../components"
+import { ContainerMain, Header, ContainerForm, NoTask, ContainerAfroNoTask, ContainerTask, ListTask, ContainerInput} from "../components"
 import { ADICIONAR } from "../assets/svg/svg";
 import { useRef, useState  } from 'react'
 import Vector from '../assets/svg/Vector.svg'
 
 function AfroTodo() {
-  const [tasks, setTasks] = useState<{ id:number; task: string;}[]>([])
+  const [tasks, setTasks] = useState<{ id:number; task: string; check: boolean;}[]>([])
   const [check, setCheck] = useState<number>(0)
   const inputRef = useRef<HTMLInputElement>(null!)
   function addTask(){
@@ -15,7 +15,8 @@ function AfroTodo() {
     }else{
       setTasks([...tasks, {
         id: tasks.length,
-        task: input.value
+        task: input.value,
+        check: false
       }])
       input.placeholder = 'Insira uma nova atividade'
       input.style.border = '1px solid #C8E6D2'
@@ -23,7 +24,14 @@ function AfroTodo() {
       input.focus()
     }
   }
-
+  function checkTask(id:number){
+    setCheck(check + 1);
+    console.log(tasks[id].check)
+  }
+  function deleteCheckTask(id:number){
+    setCheck(check - 1);
+    console.log(tasks[id].check)
+  }
   return (
      <ContainerMain>
         <Header value="center" colors="var(--color-quinary)">
@@ -31,10 +39,13 @@ function AfroTodo() {
         </Header>
         <ContainerAfroNoTask>
           <ContainerForm>
-            <div>
+            <ContainerInput>
+              <input ref={inputRef} type='text' placeholder='Insira uma nova atividade' />
+            </ContainerInput>
+            <ContainerInput>
               <input ref={inputRef} type='text' placeholder='Insira uma nova atividade' />
               <button onClick={(e)=> {e.preventDefault(); addTask()}}>{ADICIONAR}</button>
-            </div>
+            </ContainerInput>
           </ContainerForm>
           {
             tasks.length !== 0 ?  <ContainerTask>
@@ -44,10 +55,10 @@ function AfroTodo() {
                     <p>Tarefas concluídas</p><span> {check} de {tasks.length}</span>
                   </div>
                   {tasks.map(({id,task}) => <ListTask
-                  check={(e)=> e.target.checked ? setCheck(check + 1) : setCheck(check - 1)} 
+                  check={(e)=> e.target.checked ? checkTask(id) : deleteCheckTask(id)} 
                   key={id} 
                   task={task}
-                  Delete={()=> {setTasks(tasks.filter(item => item.id !== id))}}
+                  Delete={(e)=> { console.log(check) ;setTasks(tasks.filter(item => item.id !== id))}}
                   />)}
                 </ul>
               </div>

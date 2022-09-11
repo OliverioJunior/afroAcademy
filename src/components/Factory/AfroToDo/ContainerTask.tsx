@@ -12,6 +12,7 @@ export default function ContainerTask({children}:ChildrenReactNode<undefined>) {
 const Wrapper = styled.main`
     display:flex;
     flex-direction: column;
+    width: 50%;
     flex:1;
     align-items: center;
     div{
@@ -72,10 +73,6 @@ const Wrapper = styled.main`
     }
 
     @media (max-width: 1080px) {
-        ul{
-            div{
-                justify-content: center;
-            }
-        }
+        width: 80%;
     }
 `

@@ -12,6 +12,7 @@ export default function ContainerAfroNoTask({children}:ChildrenReactNode<undefin
 const Wrapper = styled.main`
     display:flex;
     flex-direction: column;
+    align-items: center;
     background:#EFF1F3;
     flex:1;
 `

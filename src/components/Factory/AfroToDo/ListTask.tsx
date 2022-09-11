@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { TRASHCAN } from "../../../assets/svg/svg";
 type ListTask = {
     task: string;
-    Delete: () => void;
+    Delete: (e:any) => void;
     check: (e:any) => void;
 }
 export default function ListTask({task, Delete, check} : ListTask) {
