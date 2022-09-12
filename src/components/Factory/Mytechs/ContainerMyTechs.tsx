@@ -12,8 +12,7 @@ const Wrapper = styled.div`
     }
     a{
         text-decoration: none;
-        color: var(--color-secunday);
-        pointer-events: none;
+        color: var(--color-primary);
     }
 `
 export default function ContainerMyTechs({children}:ChildrenReactNode<undefined>) {

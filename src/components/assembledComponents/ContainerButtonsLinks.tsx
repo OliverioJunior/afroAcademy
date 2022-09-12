@@ -29,10 +29,11 @@ export default function ContainerButtonsLinks() {
     return (
     <ContainerLinks>
         {redes.map((item) => {
+            console.log(item.link)
             return (
                 <WrapperLinks colors={item.colors} key={item.id}>
                     <IconLinkContainer>
-                      <a href={item.link}>
+                      <a href={item.link} target="_blank">
                         <div>
                             <i>
                                 {item.icon}
