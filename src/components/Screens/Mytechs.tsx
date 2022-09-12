@@ -24,4 +24,5 @@ export default function Mytechs(){
 }
 const Link = styled.a`
     color: var(--color-secundary) !important;
+    pointer-events: none;
 `
