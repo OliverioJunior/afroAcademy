@@ -1,10 +1,13 @@
 import { ContainerMyTechs, Line, HeaderMyTechs, SkillItens } from "..";
-import { useContext, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { AuthContext } from "../../context/auth";
 export default function Mytechs(){
     const linkRef = useRef<HTMLAnchorElement>(null!);
     const { setOffSetTech}= useContext(AuthContext);
-    setOffSetTech(linkRef.current?.offsetTop)
+    useEffect(()=>{
+        setOffSetTech(linkRef.current?.offsetTop)
+    },[linkRef])
+   
     return(
         <ContainerMyTechs>
             <a href="#" ref={linkRef}>
