@@ -1,8 +1,11 @@
 import { ContainerMenu, List, Header, ContainerRowHeader, NameHeader } from "../index";
-import React,{ useRef, useLayoutEffect} from "react";
+import { useRef, useLayoutEffect, useContext} from "react";
+import { AuthContext } from "../../context/auth";
 
 export default function HeaderMount() {
     const headerName = ` oliveriojunior `
+    const { OffSetTech }= useContext(AuthContext);
+    const { OffSetContact }= useContext(AuthContext);
     const listRef = [useRef<HTMLDivElement>(null!),useRef<HTMLDivElement>(null!),useRef<HTMLDivElement>(null!)]
     const headerList = [{
     id: 1,
@@ -33,11 +36,17 @@ export default function HeaderMount() {
             behavior: "smooth"
            })
         })
-        listTechs.addEventListener('click', (e)=>{
-            console.log(e.target)
+        listTechs.addEventListener('click', ()=>{
+          window.scrollTo({
+            top: OffSetTech,
+            behavior: "smooth"
+           })
         })
-        listContact.addEventListener('click', (e)=>{
-            console.log(e.target)
+        listContact.addEventListener('click', ()=>{
+          window.scrollTo({
+            top: OffSetContact,
+            behavior: "smooth"
+           })
         })
     })
     return(

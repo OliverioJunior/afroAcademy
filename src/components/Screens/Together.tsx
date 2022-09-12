@@ -1,10 +1,14 @@
+import { useContext, useRef } from "react";
 import { ContainerMyTechs, Line, HeaderMyTechs, ContainerTogether, ContainerButtonsLinks} from "..";
+import { AuthContext } from "../../context/auth";
 
 export default function Together(){
-
+    const linkRef = useRef<HTMLDivElement>(null!);
+    const { setOffSetContact }= useContext(AuthContext);
+    setOffSetContact(linkRef.current?.offsetTop)
     return(
         <ContainerMyTechs>
-            <div>
+            <div ref={linkRef}>
                 <HeaderMyTechs 
                 text="Vamos trabalhar"
                 span="juntos" 
