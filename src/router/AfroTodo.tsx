@@ -25,12 +25,28 @@ function AfroTodo() {
     }
   }
   function checkTask(id:number){
-    setCheck(check + 1);
-    console.log(tasks[id].check)
+    tasks.map(item => {
+      if(item.id === id){
+        setCheck(check + 1);
+        item.check = true
+      }
+    })
   }
   function deleteCheckTask(id:number){
-    setCheck(check - 1);
-    console.log(tasks[id].check)
+    tasks.map(item => {
+      if(item.id === id){
+        setCheck(check - 1);
+        item.check = false
+      }
+    })
+  }
+  const deleteTask = (id:number) =>{
+  tasks.map(item => {
+    if(item.id === id){
+      if(item.check){ return setCheck(check - 1), setTasks(tasks.filter(item => item.id !== id))}
+      if(!item.check){ return setTasks(tasks.filter(item => item.id !== id))}
+    }
+  })
   }
   return (
      <ContainerMain>
@@ -43,7 +59,7 @@ function AfroTodo() {
               <input ref={inputRef} type='text' placeholder='Insira uma nova atividade' />
             </ContainerInput>
             <ContainerInput>
-              <input ref={inputRef} type='text' placeholder='Insira uma nova atividade' />
+              <input  type='text' placeholder='Insira uma nova atividade' />
               <button onClick={(e)=> {e.preventDefault(); addTask()}}>{ADICIONAR}</button>
             </ContainerInput>
           </ContainerForm>
@@ -58,7 +74,7 @@ function AfroTodo() {
                   check={(e)=> e.target.checked ? checkTask(id) : deleteCheckTask(id)} 
                   key={id} 
                   task={task}
-                  Delete={(e)=> { console.log(check) ;setTasks(tasks.filter(item => item.id !== id))}}
+                  Delete={()=>{return deleteTask(id);}}
                   />)}
                 </ul>
               </div>
@@ -74,5 +90,6 @@ function AfroTodo() {
 
   )
 }
+
 
 export default AfroTodo;
