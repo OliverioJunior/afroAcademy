@@ -1,20 +1,28 @@
 import { Ref } from "react";
 import styled from "styled-components";
 import { TRASHCAN } from "../../../assets/svg/svg";
-type ListTask = {
+interface NewType {
     task: string;
-    Delete: ()=> void;
-    check: (e:any) => void;
+    Delete: () => void;
+    check: (e: any) => void;
 }
+
+type ListTask = NewType
 export default function ListTask({task, Delete, check} : ListTask) {
     return (
         <Li>
+            <DivButton>
             <label htmlFor="input">
                 <input onClick={check} type='checkbox' />
             </label>
             <p>{task}</p>
-            <button onClick={Delete}>{TRASHCAN}</button>
+                <button onClick={Delete}>{TRASHCAN}</button>
+                <button onClick={Delete}>{TRASHCAN}</button>
+            </DivButton>
         </Li>
+
+            
+
     )
 }
 
@@ -30,6 +38,9 @@ const Li = styled.li`
     margin: 5px 0;
     input{
         cursor: pointer;
+    }
+    p{
+        width:70%;
     }
     button{
         display: flex;
@@ -50,4 +61,10 @@ const Li = styled.li`
             }
         }
     }
+`
+const DivButton = styled.div`
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
 `
