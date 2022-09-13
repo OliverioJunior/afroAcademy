@@ -1,6 +1,8 @@
 import { Ref } from "react";
 import styled from "styled-components";
 import { TRASHCAN } from "../../../assets/svg/svg";
+import taskDone from '../../../assets/svg/taskDone.svg';
+import prazoTask from '../../../assets/svg/prazoTask.svg';
 interface NewType {
     task: string;
     Delete: () => void;
@@ -11,23 +13,57 @@ type ListTask = NewType
 export default function ListTask({task, Delete, check} : ListTask) {
     return (
         <Li>
+            <ContainerLi>
+                <label htmlFor="Check">
+                    <input  id='Check' onClick={check} type='checkbox' />
+                    <Check/>
+                </label>
+                <p>{task}</p>
             <DivButton>
-            <label htmlFor="input">
-                <input onClick={check} type='checkbox' />
-            </label>
-            <p>{task}</p>
                 <button onClick={Delete}>{TRASHCAN}</button>
                 <button onClick={Delete}>{TRASHCAN}</button>
             </DivButton>
+            </ContainerLi>
+            <ContainerData>
+                <img src={taskDone}/><p>20/09/2022</p>
+                <img src={prazoTask}/><p>20/09/2022</p>
+            </ContainerData>
         </Li>
+
 
             
 
     )
 }
-
+const Check = styled.div`
+    border: 2px solid #4f4f4f;
+    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+`
+const ContainerLi = styled.div`
+    display: flex;
+    width: 100%;
+    p{
+        width:70%;
+    }
+    input{
+        display:none;
+    }
+`
+const ContainerData = styled.div`
+    display: flex;
+    width: 100%;
+    align-items:center;
+    justify-content: flex-end;
+    p{
+        margin: 0 10px;
+    }
+`
 const Li = styled.li`
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     background: #fff;
@@ -39,9 +75,14 @@ const Li = styled.li`
     input{
         cursor: pointer;
     }
-    p{
-        width:70%;
-    }
+    
+    
+`
+const DivButton = styled.div`
+    width: 100px; 
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
     button{
         display: flex;
         justify-content: center;
@@ -61,10 +102,4 @@ const Li = styled.li`
             }
         }
     }
-`
-const DivButton = styled.div`
-    flex:1;
-    display:flex;
-    align-items:center;
-    justify-content: space-between;
 `
