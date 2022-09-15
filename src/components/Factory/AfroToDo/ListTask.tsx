@@ -1,16 +1,22 @@
 import { Ref } from "react";
 import styled from "styled-components";
-import { TRASHCAN } from "../../../assets/svg/svg";
+import { TRASHCAN, EDIT } from "../../../assets/svg/svg";
 import taskDone from '../../../assets/svg/taskDone.svg';
 import prazoTask from '../../../assets/svg/prazoTask.svg';
 interface NewType {
     task: string;
     Delete: () => void;
     check: (e: any) => void;
+    done: string;
+    today: string;
+}
+type ButtonType = {
+    fill: string;
+    padding: string;
 }
 
 type ListTask = NewType
-export default function ListTask({task, Delete, check} : ListTask) {
+export default function ListTask({task, Delete, check, done, today} : ListTask) {
     return (
         <Li>
             <ContainerLi>
@@ -20,13 +26,13 @@ export default function ListTask({task, Delete, check} : ListTask) {
                 </label>
                 <p>{task}</p>
             <DivButton>
-                <button onClick={Delete}>{TRASHCAN}</button>
-                <button onClick={Delete}>{TRASHCAN}</button>
+                <Button padding='6px' fill='#70AE6E' onClick={Delete}>{EDIT}</Button>
+                <Button padding='9px' fill='#FE5F55' onClick={Delete}>{TRASHCAN}</Button>
             </DivButton>
             </ContainerLi>
             <ContainerData>
-                <img src={taskDone}/><p>20/09/2022</p>
-                <img src={prazoTask}/><p>20/09/2022</p>
+                <img src={taskDone}/><p>{done}</p>
+                <img src={prazoTask}/><p>{today}</p>
             </ContainerData>
         </Li>
 
@@ -35,6 +41,27 @@ export default function ListTask({task, Delete, check} : ListTask) {
 
     )
 }
+const Button = styled.button`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: ${({padding}:ButtonType)=> padding};
+    width: 32px;
+    height: 32px;
+    fill:  #4F4F4F;
+    background: #F1F7ED;
+    border-radius: 8px;
+    border:none; 
+    cursor: pointer;
+    svg{
+        &:hover{
+            fill: ${({fill}:ButtonType)=> fill};
+        }
+    }
+
+
+`
 const Check = styled.div`
     border: 2px solid #4f4f4f;
     border-radius: 4px;
@@ -44,9 +71,12 @@ const Check = styled.div`
 `
 const ContainerLi = styled.div`
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     p{
         width:70%;
+        margin: 0 10px;
     }
     input{
         display:none;
@@ -83,23 +113,5 @@ const DivButton = styled.div`
     display:flex;
     align-items:center;
     justify-content: space-between;
-    button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        padding: 10px;
-        width: 32px;
-        height: 32px;
-        fill:  #4F4F4F;
-        background: #F1F7ED;
-        border-radius: 8px;
-        border:none; 
-        cursor: pointer;
-        svg{
-            &:hover{
-                fill: #FE5F55;
-            }
-        }
-    }
+    
 `

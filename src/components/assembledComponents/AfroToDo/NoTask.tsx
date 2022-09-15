@@ -1,5 +1,5 @@
 import { ContainerNoTask } from "../..";
-import NoItem from '../../../assets/svg/NoItems.svg'
+import NoItem from '../../../assets/svg/noItem.svg'
 
 export default function NoTask() {
     return(

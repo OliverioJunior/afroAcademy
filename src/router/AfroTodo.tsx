@@ -4,7 +4,7 @@ import { useEffect, useRef, useState  } from 'react'
 import Vector from '../assets/svg/Vector.svg'
 
 function AfroTodo() {
-  const [tasks, setTasks] = useState<{ id:number; task: string; check: boolean;}[]>([])
+  const [tasks, setTasks] = useState<{ id:number; task: string; check: boolean; done:string;}[]>([])
   const [check, setCheck] = useState<number>(0)
   const inputRef = useRef<HTMLInputElement>(null!)
   const inputDataRef = useRef<HTMLInputElement>(null!)
@@ -18,18 +18,26 @@ function AfroTodo() {
         data.value = data.value.slice(0, -1)
       }
     })
-    console.log(data)
   })
+  function formataData(){
+    const data = inputDataRef.current
+    const formatar = new RegExp(/([\d]{4})[-][\d]{2}[-][\d]{2}/)
+    console.log(formatar.exec(data.value)) 
+    
+  }
   function addTask(){
     const input = inputRef.current
-    if(!input.value){
+    const data = inputDataRef.current
+    if(!input.value && data.value){
       input.placeholder = 'Nenhuma atividade escrita'
       input.style.border = '1px solid #FE5F55'
     }else{
+      formataData()
       setTasks([...tasks, {
         id: tasks.length,
         task: input.value,
-        check: false
+        check: false,
+        done: 'DATA'
       }])
       input.placeholder = 'Insira uma nova atividade'
       input.style.border = '1px solid #C8E6D2'
@@ -54,12 +62,12 @@ function AfroTodo() {
     })
   }
   const deleteTask = (id:number) =>{
-  /* tasks.map(item => {
+   tasks.map(item => {
     if(item.id === id){
       if(item.check){ return setCheck(check - 1), setTasks(tasks.filter(item => item.id !== id))}
       if(!item.check){ return setTasks(tasks.filter(item => item.id !== id))}
     }
-  }) */
+  }) 
   
   }
   return (
@@ -73,7 +81,7 @@ function AfroTodo() {
               <input ref={inputRef} type='text' placeholder='Insira uma nova atividade' />
             </ContainerInput>
             <ContainerInput>
-              <input ref={inputDataRef} type='data' placeholder='Insira uma nova atividade' />
+              <input ref={inputDataRef} type='datetime-local' placeholder='Insira uma nova data' />
               <button onClick={(e)=> {e.preventDefault(); addTask()}}>{ADICIONAR}</button>
             </ContainerInput>
           </ContainerForm>
@@ -85,10 +93,12 @@ function AfroTodo() {
                   <ContainerDivUlTask>
                     <p>Tarefas concluídas</p><span> {check} de {tasks.length}</span>
                   </ContainerDivUlTask>
-                  {tasks.map(({id,task}) => <ListTask
+                  {tasks.map(({id,task, done}) => <ListTask
                   check={(e)=> e.target.checked ? checkTask(id) : deleteCheckTask(id)} 
                   key={id} 
                   task={task}
+                  done={done}
+                  today={''}
                   Delete={()=>{return deleteTask(id);}}
                   />)}
                 </ContainerUlTask>
