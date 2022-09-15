@@ -5,7 +5,7 @@ type Background = {
 }
 export default function ContainerForm({children, background}:ChildrenReactNode<undefined>) {
     return(
-        <Wrapper background={background}>
+        <Wrapper action="#" background={background}>
             {children}
         </Wrapper>
     )

@@ -2,42 +2,50 @@ import { ContainerMain, Header, ContainerForm, NoTask, ContainerAfroNoTask, Cont
 import { ADICIONAR } from "../assets/svg/svg";
 import { useEffect, useRef, useState  } from 'react'
 import Vector from '../assets/svg/Vector.svg'
-
+type TaskType = {
+  id:number; 
+  task: string; 
+  check: boolean; 
+  done:string; 
+  today:string
+}
 function AfroTodo() {
-  const [tasks, setTasks] = useState<{ id:number; task: string; check: boolean; done:string;}[]>([])
+  const [tasks, setTasks] = useState<TaskType[]>([])
   const [check, setCheck] = useState<number>(0)
   const inputRef = useRef<HTMLInputElement>(null!)
   const inputDataRef = useRef<HTMLInputElement>(null!)
   useEffect(()=>{
     const data = inputDataRef.current
-    data.addEventListener('keypress', ()=>{
+   /*  data.addEventListener('keypress', ()=>{
       if(data.value.length < 10){
         let da = data.value.replace(/[a-z]/ig, data.value.slice(0, -1))
         data.value = da
       } else {
         data.value = data.value.slice(0, -1)
       }
-    })
+    }) */
   })
   function formataData(){
     const data = inputDataRef.current
-    const formatar = new RegExp(/([\d]{4})[-][\d]{2}[-][\d]{2}/)
-    console.log(formatar.exec(data.value)) 
+    const day = data.value.substring(8)
+    const mon = data.value.substring(5,7)
+    const year = data.value.substring(0,4)
+    return `${day}/${mon}/${year}`
     
   }
   function addTask(){
     const input = inputRef.current
     const data = inputDataRef.current
-    if(!input.value && data.value){
+    if(!input.value || data.value.length === 0){
       input.placeholder = 'Nenhuma atividade escrita'
       input.style.border = '1px solid #FE5F55'
     }else{
-      formataData()
       setTasks([...tasks, {
         id: tasks.length,
         task: input.value,
         check: false,
-        done: 'DATA'
+        done: formataData(),
+        today:`até ${formataData()}`
       }])
       input.placeholder = 'Insira uma nova atividade'
       input.style.border = '1px solid #C8E6D2'
@@ -76,13 +84,13 @@ function AfroTodo() {
           <img src={Vector} alt='icon check'/><h1 onClick={() => window.scroll({top:0, behavior: "smooth"})}>AfroToDo</h1>
         </Header>
         <ContainerAfroNoTask>
-          <ContainerForm>
+          <ContainerForm >
             <ContainerInput>
-              <input ref={inputRef} type='text' placeholder='Insira uma nova atividade' />
+              <input ref={inputRef} required type='text' placeholder='Insira uma nova atividade' />
             </ContainerInput>
             <ContainerInput>
-              <input ref={inputDataRef} type='datetime-local' placeholder='Insira uma nova data' />
-              <button onClick={(e)=> {e.preventDefault(); addTask()}}>{ADICIONAR}</button>
+              <input ref={inputDataRef} type='date'required />
+              <button type="submit" onClick={(e)=> {e.preventDefault(); addTask()}}>{ADICIONAR}</button>
             </ContainerInput>
           </ContainerForm>
           {
@@ -93,12 +101,12 @@ function AfroTodo() {
                   <ContainerDivUlTask>
                     <p>Tarefas concluídas</p><span> {check} de {tasks.length}</span>
                   </ContainerDivUlTask>
-                  {tasks.map(({id,task, done}) => <ListTask
+                  {tasks.map(({id,task, done, today}) => <ListTask
                   check={(e)=> e.target.checked ? checkTask(id) : deleteCheckTask(id)} 
                   key={id} 
                   task={task}
                   done={done}
-                  today={''}
+                  today={today}
                   Delete={()=>{return deleteTask(id);}}
                   />)}
                 </ContainerUlTask>

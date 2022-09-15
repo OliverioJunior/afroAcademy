@@ -20,19 +20,25 @@ export default function ListTask({task, Delete, check, done, today} : ListTask) 
     return (
         <Li>
             <ContainerLi>
-                <label htmlFor="Check">
-                    <input  id='Check' onClick={check} type='checkbox' />
-                    <Check/>
-                </label>
+                <DivLabel>
+                    <label htmlFor="Check">
+                        <input  id='Check' onClick={check} type='checkbox' />
+                        <Check/>
+                    </label>
+                </DivLabel>
                 <p>{task}</p>
+
             <DivButton>
                 <Button padding='6px' fill='#70AE6E' onClick={Delete}>{EDIT}</Button>
                 <Button padding='9px' fill='#FE5F55' onClick={Delete}>{TRASHCAN}</Button>
             </DivButton>
             </ContainerLi>
             <ContainerData>
-                <img src={taskDone}/><p>{done}</p>
+                <ContainerImg>
+                    <img src={taskDone}/><p>{done}</p>
+                </ContainerImg>
                 <img src={prazoTask}/><p>{today}</p>
+
             </ContainerData>
         </Li>
 
@@ -54,6 +60,7 @@ const Button = styled.button`
     border-radius: 8px;
     border:none; 
     cursor: pointer;
+    margin: 0 0 0 10px;
     svg{
         &:hover{
             fill: ${({fill}:ButtonType)=> fill};
@@ -71,15 +78,20 @@ const Check = styled.div`
 `
 const ContainerLi = styled.div`
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     p{
         width:70%;
-        margin: 0 10px;
+        margin: 7px 10px 0px 10px;
+        word-break: break-word;
+        text-align: justify;
     }
     input{
         display:none;
+    }
+    label{
+        margin-right: 10px;
     }
 `
 const ContainerData = styled.div`
@@ -89,6 +101,7 @@ const ContainerData = styled.div`
     justify-content: flex-end;
     p{
         margin: 0 10px;
+        color: #4F4F4F;
     }
 `
 const Li = styled.li`
@@ -109,9 +122,20 @@ const Li = styled.li`
     
 `
 const DivButton = styled.div`
-    width: 100px; 
+    width: 142px;
     display:flex;
     align-items:center;
-    justify-content: space-between;
+    justify-content: flex-end;
     
+`
+const ContainerImg = styled.div`
+    display:none;
+`
+const DivLabel = styled.div`
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width: 32px;
+    height: 32px;
+
 `
