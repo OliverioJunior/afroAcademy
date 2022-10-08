@@ -1,8 +1,14 @@
-import { Welcome } from "./components";
+import Router from "./router/Router"
+import { Global } from "./styles/global"
+
 function App() {
   
   return (
-      <Welcome/>
+    <>
+      <Router />
+      <Global />
+    </>
+      
     )
 }
 

@@ -34,16 +34,5 @@ import ContainerLinks from './Factory/Together/ContainerLinks'
 import WrapperLinks from './Factory/Together/WrapperLinks'
 import ContainerButtonsLinks from "./assembledComponents/ContainerButtonsLinks";
 import IconLinkContainer from "./Factory/Together/IconLinkContainer";
-import Welcome from "../router/Welcome";
-import AfroTodo from "../router/AfroTodo";
-import ContainerForm from "./Factory/AfroToDo/ContainerForm";
-import ContainerNoTask from "./Factory/AfroToDo/ContainerNoTask";
-import NoTask from "./assembledComponents/AfroToDo/NoTask";
-import ContainerAfroNoTask from "./Factory/AfroToDo/ContainerAfroNoTask";
-import ContainerTask from "./Factory/AfroToDo/ContainerTask";
-import ListTask from "./Factory/AfroToDo/ListTask";
-import ContainerInput from "./Factory/AfroToDo/ContainerInput";
-import ContainerDivList from "./Factory/AfroToDo/ContainerDivList";
-import ContainerUlTask from "./Factory/AfroToDo/ContainerUlTask";
-import ContainerDivUlTask from "./Factory/AfroToDo/ContainerDivUlTask";
-export { Header,ContainerMain, ContainerMinContent, Paragraph, List, HeaderMount, ContainerRowHeader, ContainerHalfWidthColumn, ContainerMaxContent, Button, Imagens, Square, SectionMount, Line, ContainerMenu , HeaderMyTechs, SkillItens, ContainerIcon, SectionHeader, ContainerMainScreenWidth, Main, ContainerImagen, NameHeader, ContainerSectionItens, ContainerButtonSection, Mytechs, ContainerMyTechs, ContainerHeaderTechs, ContainerSkills, ContainerSkillItens, Together, ContainerTogether, ContainerLinks, WrapperLinks, ContainerButtonsLinks, IconLinkContainer, Welcome, AfroTodo, ContainerForm, ContainerNoTask, NoTask, ContainerAfroNoTask, ContainerTask, ListTask, ContainerInput, ContainerDivList, ContainerUlTask, ContainerDivUlTask};
+import Welcome from "../pages/Welcome";
+export { Header,ContainerMain, ContainerMinContent, Paragraph, List, HeaderMount, ContainerRowHeader, ContainerHalfWidthColumn, ContainerMaxContent, Button, Imagens, Square, SectionMount, Line, ContainerMenu , HeaderMyTechs, SkillItens, ContainerIcon, SectionHeader, ContainerMainScreenWidth, Main, ContainerImagen, NameHeader, ContainerSectionItens, ContainerButtonSection, Mytechs, ContainerMyTechs, ContainerHeaderTechs, ContainerSkills, ContainerSkillItens, Together, ContainerTogether, ContainerLinks, WrapperLinks, ContainerButtonsLinks, IconLinkContainer, Welcome};

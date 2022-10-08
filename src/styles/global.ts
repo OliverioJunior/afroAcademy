@@ -1,7 +1,11 @@
+import { createGlobalStyle } from 'styled-components';
+
+export const Global = createGlobalStyle`
+
 *{
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -11,5 +15,5 @@
   --color-secundary: #000;
   --color-tertiary: #4F3ACF;
   --color-quaternary: #5F5F5F;
-  --color-quinary: #70AE6E;
 }
+`
