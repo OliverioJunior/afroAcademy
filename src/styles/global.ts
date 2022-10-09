@@ -32,5 +32,9 @@ a {
   --color-secundary: #000;
   --color-tertiary: #4F3ACF;
   --color-quaternary: #5F5F5F;
+
+  --purple-400: #961fff;
+
+  --yellow-100: #fff36b;
 }
 `;

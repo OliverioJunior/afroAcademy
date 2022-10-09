@@ -16,14 +16,6 @@ export const Container = styled.header`
   /*  &:hover {
     box-shadow: inset -10px 0px 20px 1px var(--color-tertiary);
   } */
-
-  img {
-    width: 8rem;
-    height: 8rem;
-    padding: 0.25rem;
-    border-radius: 50%;
-    border: 3px solid var(--color-tertiary);
-  }
   h1 {
     margin-top: 1rem;
     font-weight: 600;
@@ -41,12 +33,30 @@ export const Container = styled.header`
         padding: 1rem;
         text-align: center;
         border-bottom: 1px solid var(--color-tertiary);
-        transition: all 1s;
+        transition: all 0.75s;
         &:hover {
-          color: #fb1f;
-          outline: 1px solid var(--color-tertiary);
+          color: var(--yellow-100);
+          outline: 1px solid var(--yellow-100);
+        }
+        :last-child {
+          border: none;
         }
       }
+    }
+  }
+  a {
+    :hover {
+      svg {
+        fill: var(--yellow-100);
+        margin-left: 10px;
+      }
+    }
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    i + i {
+      margin-left: 1rem;
     }
   }
 `;
@@ -68,7 +78,7 @@ export const Skills = styled.div`
       padding: 0rem;
       border-radius: 0.125rem;
       border: none;
-      transition: 1s;
+      transition: 0.65s;
       &:hover {
         transform: translateY(-5px);
       }
@@ -83,4 +93,12 @@ export const Adress = styled.address`
     padding: 0;
     margin-right: 0.25rem;
   }
+`;
+
+export const ImgIcon = styled.img`
+  width: 8rem;
+  height: 8rem;
+  padding: 0.25rem;
+  border-radius: 50%;
+  border: 3px solid var(--color-tertiary);
 `;

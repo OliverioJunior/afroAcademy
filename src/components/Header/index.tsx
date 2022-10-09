@@ -1,4 +1,4 @@
-import { Adress, Container, Skills } from './styles';
+import { Adress, Container, ImgIcon, Skills } from './styles';
 import Perfil from '../../assets/imgs/Perfil.jpeg';
 import typescript from '../../assets/svg/typescript.svg';
 import Next from '../../assets/svg/Next.svg';
@@ -6,12 +6,14 @@ import React from '../../assets/svg/React.svg';
 import Sass from '../../assets/svg/Sass.svg';
 import Eslint from '../../assets/svg/Eslint.svg';
 import local from '../../assets/svg/local.svg';
+import GitHub from '../../assets/svg/GitHub.svg';
+import Linkedin from '../../assets/svg/Linkedin.svg';
 import StyledComponent from '../../assets/imgs/styled-components.png';
 
 export const Header: React.FC = () => {
   return (
     <Container>
-      <img src={Perfil} />
+      <ImgIcon src={Perfil} />
       <h1>Olivério Júnior</h1>
       <p>Desenvolvedor Frontend | ReactJs</p>
       <Adress>
@@ -45,10 +47,29 @@ export const Header: React.FC = () => {
       </Skills>
       <nav>
         <ul>
-          <li>Home</li>
           <li>Sobre</li>
           <li>Works</li>
           <li>Contato</li>
+          <li>
+            <a
+              href="https://github.com/OliverioJunior"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i>
+                <img src={GitHub} />
+              </i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/olivério-júnior/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i>
+                <img src={Linkedin} />
+              </i>
+            </a>
+          </li>
         </ul>
       </nav>
     </Container>
