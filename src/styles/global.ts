@@ -16,4 +16,4 @@ export const Global = createGlobalStyle`
   --color-tertiary: #4F3ACF;
   --color-quaternary: #5F5F5F;
 }
-`
+`;

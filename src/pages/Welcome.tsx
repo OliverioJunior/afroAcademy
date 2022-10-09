@@ -1,16 +1,5 @@
-import { ContainerMain, Main, Mytechs, Together } from "../components"
+import { Header } from '../components/Header';
 
-
-function Welcome() {
-  
-  return (
-     <ContainerMain>
-        <Main/>
-        <Mytechs/>
-        <Together/>
-      </ContainerMain>
-
-  )
-}
-
-export default Welcome;
+export const Welcome: React.FC = () => {
+  return <Header />;
+};
