@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.header`
   width: 19rem;
-  height: 100vh;
+  max-height: 100vh;
   position: fixed;
   background: #030609;
   color: #d3cde3;
@@ -12,7 +12,7 @@ export const Container = styled.header`
   align-items: center;
   border-bottom-right-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  transition: 2s;
+  transition: color outline 2s;
   /*  &:hover {
     box-shadow: inset -10px 0px 20px 1px var(--color-tertiary);
   } */
@@ -86,6 +86,7 @@ export const Skills = styled.div`
   }
 `;
 export const Adress = styled.address`
+  margin-top: 0.55rem;
   img {
     width: 1rem;
     height: 1rem;

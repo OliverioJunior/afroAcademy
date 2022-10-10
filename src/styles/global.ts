@@ -9,7 +9,9 @@ export const Global = createGlobalStyle`
   box-sizing: border-box;
   overflow-x: hidden;
 }
-
+html, body {
+  background-color: #1d1d1d;
+}
 button {
   cursor: pointer;
 }
@@ -22,12 +24,13 @@ a {
   color: inherit;
 }
 #root {
-  max-width: var(---max-width);
+  max-width: var(--max-width);
   margin: 0 auto;
+  display: flex;
 }
 
 :root{
-  --max-width: 75rem;
+  --max-width: 90rem;
   --color-primary: #FFF;
   --color-secundary: #000;
   --color-tertiary: #4F3ACF;

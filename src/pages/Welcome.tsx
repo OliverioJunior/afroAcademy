@@ -1,5 +1,10 @@
-import { Header } from '../components/Header';
+import { About, Header } from '../components';
 
 export const Welcome: React.FC = () => {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <About />
+    </>
+  );
 };
