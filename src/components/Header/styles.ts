@@ -35,11 +35,14 @@ export const Container = styled.header`
         border-bottom: 1px solid var(--color-tertiary);
         transition: all 0.75s;
         &:hover {
-          color: var(--yellow-100);
-          outline: 1px solid var(--yellow-100);
+          color: #00dcff;
+          outline: 1px solid #00dcff;
         }
         :last-child {
           border: none;
+          i {
+            margin-left: 10px;
+          }
         }
       }
     }
