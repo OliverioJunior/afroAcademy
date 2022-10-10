@@ -15,7 +15,7 @@ export const Header: React.FC = () => {
     <Container>
       <ImgIcon src={Perfil} />
       <h1>Olivério Júnior</h1>
-      <p>Desenvolvedor Frontend | ReactJs</p>
+      <p>Developer Frontend | ReactJs</p>
       <Adress>
         <i>
           <img src={local} alt="local" />
@@ -47,9 +47,9 @@ export const Header: React.FC = () => {
       </Skills>
       <nav>
         <ul>
-          <li>Sobre</li>
+          <li>About</li>
           <li>Works</li>
-          <li>Contato</li>
+          <li>Contact</li>
           <li>
             <a
               href="https://github.com/OliverioJunior"

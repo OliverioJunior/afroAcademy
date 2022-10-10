@@ -39,5 +39,9 @@ a {
   --purple-400: #961fff;
 
   --yellow-100: #fff36b;
+
+  --gray-100:#d3cde3;
+  --gray-600:#1d1d1d;
+  --gray-900:#030609;
 }
 `;

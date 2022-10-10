@@ -4,8 +4,8 @@ export const Container = styled.header`
   width: 19rem;
   max-height: 100vh;
   position: fixed;
-  background: #030609;
-  color: #d3cde3;
+  background: var(--gray-900);
+  color: var(--gray-100);
   padding: 2rem;
   display: flex;
   flex-direction: column;
