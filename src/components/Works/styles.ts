@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
-  width: 100%;
   height: 100vh;
+  flex: 1;
   padding-left: 19rem;
   background-color: var(--gray-600);
   display: flex;
@@ -12,11 +12,14 @@ export const Container = styled.main`
 `;
 
 export const Wrapper = styled.section`
-  width: 400px;
+  max-width: 400px;
   height: 200px;
+  flex: 1;
+  display: flex;
   border-radius: 0.25rem;
-  background-color: #fff;
+  background-color: #372d4e;
   padding: 20px 0 0 20px;
+  box-shadow: 4px 6px 44px #00dcff;
   img {
     height: 160px;
     border-radius: 0.5rem;
