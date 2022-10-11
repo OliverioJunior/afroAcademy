@@ -1,13 +1,12 @@
 import { Button } from '../Button';
-import { Container, DivFalsa, Welcome } from './styles';
+import { Container, Welcome } from './styles';
 
 export const About: React.FC = () => {
   const Titulo = `Welcome,`;
-  const that = "that's";
+  const that = " that's";
   const frase = "Let's work together";
   return (
     <Container>
-      <DivFalsa />
       <Welcome>
         <h1>
           {Titulo}

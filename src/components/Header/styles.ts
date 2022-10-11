@@ -71,7 +71,10 @@ export const Skills = styled.div`
   i + i {
     margin-left: 10px;
   }
-  i {
+`;
+export const IconAnimation = styled.i`
+
+
     height: 3.375rem;
     display: flex;
     align-items: flex-end;
@@ -86,7 +89,7 @@ export const Skills = styled.div`
         transform: translateY(-5px);
       }
     }
-  }
+
 `;
 export const Adress = styled.address`
   margin-top: 0.55rem;

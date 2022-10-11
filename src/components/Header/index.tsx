@@ -1,4 +1,4 @@
-import { Adress, Container, ImgIcon, Skills } from './styles';
+import { Adress, Container, IconAnimation, ImgIcon, Skills } from './styles';
 import Perfil from '../../assets/imgs/Perfil.jpeg';
 import typescript from '../../assets/svg/typescript.svg';
 import Next from '../../assets/svg/Next.svg';
@@ -26,24 +26,24 @@ export const Header: React.FC = () => {
         <i>Main Skills</i>
       </h2>
       <Skills>
-        <i>
+        <IconAnimation>
           <img src={typescript} alt="Typescript" />
-        </i>
-        <i>
+        </IconAnimation>
+        <IconAnimation>
           <img src={Next} alt="Next" />
-        </i>
-        <i>
+        </IconAnimation>
+        <IconAnimation>
           <img src={React} alt="React" />
-        </i>
-        <i>
+        </IconAnimation>
+        <IconAnimation>
           <img src={Sass} alt="Sass" />
-        </i>
-        <i>
+        </IconAnimation>
+        <IconAnimation>
           <img src={StyledComponent} alt="Styled-Component" />
-        </i>
-        <i>
+        </IconAnimation>
+        <IconAnimation>
           <img src={Eslint} alt="Eslint" />
-        </i>
+        </IconAnimation>
       </Skills>
       <nav>
         <ul>
