@@ -24,7 +24,7 @@ export const Wrapper = styled.section`
     height: 160px;
     border-radius: 0.5rem;
     &:hover {
-      filter:opacity(0.9);
+      filter: opacity(0.9);
     }
   }
 `;

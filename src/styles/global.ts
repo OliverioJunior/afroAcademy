@@ -10,7 +10,7 @@ export const Global = createGlobalStyle`
   overflow-x: hidden;
 }
 html, body {
-  background-color: #1d1d1d;
+  background-color: var(--gray-900);
 }
 button {
   cursor: pointer;

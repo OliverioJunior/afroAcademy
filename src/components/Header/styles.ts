@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.header`
   width: 19rem;
-  max-height: 100vh;
+  height: 100vh;
   position: fixed;
   background: var(--gray-900);
   color: var(--gray-100);
@@ -10,6 +10,7 @@ export const Container = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   border-bottom-right-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   transition: color outline 2s;
@@ -63,6 +64,12 @@ export const Container = styled.header`
     }
   }
 `;
+export const DivSkill = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 export const Skills = styled.div`
   display: flex;
   width: 100%;
@@ -73,23 +80,20 @@ export const Skills = styled.div`
   }
 `;
 export const IconAnimation = styled.i`
-
-
-    height: 3.375rem;
-    display: flex;
-    align-items: flex-end;
-    img {
-      width: 2rem;
-      height: 2rem;
-      padding: 0rem;
-      border-radius: 0.125rem;
-      border: none;
-      transition: 0.65s;
-      &:hover {
-        transform: translateY(-5px);
-      }
+  height: 3.375rem;
+  display: flex;
+  align-items: flex-end;
+  img {
+    width: 2rem;
+    height: 2rem;
+    padding: 0rem;
+    border-radius: 0.125rem;
+    border: none;
+    transition: 0.65s;
+    &:hover {
+      transform: translateY(-5px);
     }
-
+  }
 `;
 export const Adress = styled.address`
   margin-top: 0.55rem;
@@ -108,4 +112,8 @@ export const ImgIcon = styled.img`
   padding: 0.25rem;
   border-radius: 50%;
   border: 3px solid var(--color-tertiary);
+`;
+export const Footer = styled.footer`
+  display: flex;
+  gap: 15px;
 `;
